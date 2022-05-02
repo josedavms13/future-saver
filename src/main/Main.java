@@ -1,21 +1,22 @@
 package main;
 
-import GUI.Pages.FirstPage;
+import GUI.UiMain;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+import static java.lang.Thread.sleep;
 
 public class Main {
-
-    private static FirstPage firstPage;
-
     public static void main(String[] args) {
-        firstPage = new FirstPage("ALALA");
+        new UiMain();
     }
 
 
+    private static void timer() {
 
 
 
 
-    private void exitProgram() {
-        System.exit(0);
     }
 }

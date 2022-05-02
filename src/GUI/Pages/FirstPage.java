@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class FirstPage extends GuiBase implements ActionListener {
+public class FirstPage extends GuiBase {
 
     private final JTextField timeTextField = new JTextField();
 
@@ -16,7 +16,7 @@ public class FirstPage extends GuiBase implements ActionListener {
     private JLabel timeLabel;
 
     public FirstPage(String passwordToShow) {
-        super(new JFrame());
+        super();
         passwordLabel = new JLabel(passwordToShow);
         this.fillFrame();
         setWindowVisible(true);
@@ -24,34 +24,28 @@ public class FirstPage extends GuiBase implements ActionListener {
 
 
     public void fillFrame() {
-//        JPanel timePanel = new JPanel();
-//        timePanel.setOpaque(false);
-//        timePanel.add(this.timeLabel);
-//        this.frame.add(timePanel);
-//
-//        JPanel timeInputPanel = new JPanel();
-//        timeInputPanel.setOpaque(false);
-//        timeInputPanel.add(this.timeTextField);
-//        this.frame.add(timeInputPanel);
-//
-//        JPanel passwordPanel = new JPanel();
-//        passwordPanel.setOpaque(false);
-//        passwordPanel.add(this.passwordLabel);
-//        this.frame.add(passwordPanel);
-//
+        JPanel timePanel = new JPanel();
+        timePanel.setOpaque(false);
+        timePanel.add(this.timeLabel);
+        this.add(timePanel);
+
+        JPanel timeInputPanel = new JPanel();
+        timeInputPanel.setOpaque(false);
+        timeInputPanel.add(this.timeTextField);
+        this.add(timeInputPanel);
+
+        JPanel passwordPanel = new JPanel();
+        passwordPanel.setOpaque(false);
+        passwordPanel.add(this.passwordLabel);
+        this.add(passwordPanel);
+
 //        JPanel passwordInputPanel = new JPanel();
 //        passwordPanel.setOpaque(false);
 //        passwordPanel.add(passwordInputPanel);
 
 
 
-
-
-        this.frame.pack();
+        this.pack();
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-    }
 }
